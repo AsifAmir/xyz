@@ -1,0 +1,351 @@
+body {
+  background: #142143;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+    sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.timelineContainer {
+  width: 365px;
+  border: 1px solid #333639;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.timelineHeader {
+  cursor: pointer;
+  padding: 10px;
+  color: #ffffff;
+  background-color: transparent;
+  transition-duration: 100ms;
+}
+.timelineHeader h2 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.timelineHeader:hover {
+  background-color: rgb(29 155, 140, 0.1);
+  color: #ffffff;
+}
+.timelineHeader:hover h2 {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.contentContainer {
+  max-width: 100%;
+  position: relative;
+  border-top: 1px solid #333639;
+  display: flex;
+  padding: 1rem 1rem;
+  padding-bottom: 0.75rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.contentContainer:hover {
+  background: #16181c;
+}
+
+.quotedContainer {
+  max-width: fit-content;
+  display: flex;
+  border: 1px solid #333639;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+.profileImageBusiness {
+  border-radius: 8px;
+  width: 2.5rem;
+}
+.profileImageUser {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+.quotedPofileImage {
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.textContainer {
+  width: fit-content;
+  margin-left: 1rem;
+}
+
+.headerContainer {
+  width: 280px;
+  max-width: 100%;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-between;
+}
+.quotedHeaderContainer {
+  width: 170px;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-between;
+}
+.headerTextContainer {
+  display: flex;
+  width: 90%;
+  color: #ffffff;
+}
+.quotedHeaderTextContainer {
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+}
+
+.headerTextNameContainer {
+  display: flex;
+  column-gap: 0.2rem;
+}
+
+.brandName {
+  padding-top: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  line-clamp: 1;
+  text-wrap: nowrap;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 1;
+}
+
+.nickname {
+  color: #71767b;
+  font-size: 15px;
+  margin: 0;
+  justify-self: stretch;
+  margin-top: 0px;
+  margin-left: 4px;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#headerDot {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin-top: 0.6rem;
+  margin-left: 0.45rem;
+  min-width: 2px;
+  background-color: #71767b;
+}
+.dateText {
+  width: max-content;
+  color: #71767b;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  margin-left: 0.5rem;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.tweetTextArea {
+  margin-top: 0.15rem;
+  color: #fff;
+}
+.hashtag {
+  color: #1d9bf0;
+}
+.tweetTextArea p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+}
+.tweetImage {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #333639;
+}
+
+.attachmentsContainer {
+  margin-top: 0.75rem;
+  position: relative;
+  width: auto;
+}
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gallery2 {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+
+.gallery2 img {
+  width: 125px;
+  min-height: 130px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.gallery2 div:nth-child(1) img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.gallery2 div:nth-child(2) img {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.gallery3 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0.1rem;
+}
+
+.gallery3 img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.gallery3 img:nth-child(1) {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  grid-row: span 2 / span 2;
+  height: 100%;
+}
+
+.gallery3 img:nth-child(2) {
+  grid-column: span 1 / span 1;
+  border-top-right-radius: 15px;
+}
+
+.gallery3 img:nth-child(3) {
+  grid-column: span 1 / span 1;
+  border-bottom-right-radius: 15px;
+}
+
+.gallery4 {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 0rem;
+}
+
+.gallery4 img {
+  width: 125px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.gallery4 img:nth-child(1) {
+  border-top-left-radius: 15px;
+}
+
+.gallery4 img:nth-child(2) {
+  border-top-right-radius: 15px;
+}
+
+.gallery4 img:nth-child(3) {
+  border-bottom-left-radius: 15px;
+}
+
+.gallery4 img:nth-child(4) {
+  border-bottom-right-radius: 15px;
+}
+.xIcon {
+  width: 20px;
+  fill: rgb(29, 155, 240);
+}
+.metricsContainer {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 0.75rem;
+  font-size: 13px;
+}
+.answers {
+  display: flex;
+  fill: #71767b;
+  color: #71767b;
+}
+.favorites {
+  display: flex;
+  fill: #71767b;
+  color: #71767b;
+}
+.metricsContainer div span {
+  padding-top: 0.15rem;
+}
+.answersIcon {
+  width: 20px;
+  margin-right: 0.25rem;
+}
+
+.retweetText {
+  margin-bottom: 0.5rem;
+  color: #71767b;
+  font-weight: bold;
+  font-size: 12px;
+}
+.retweetIcon {
+  transform: translate(0.2rem, -0.1rem);
+  text-align: end;
+  align-items: end;
+  margin-bottom: 0.5rem;
+  color: #71767b;
+  font-weight: bold;
+  font-size: 12px;
+}
+.tweetContentMobile {
+  display: none;
+  padding: 0.5rem;
+}
+.hedaerInfoTextArea {
+  display: flex;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .contentContainer {
+    padding: 1rem 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+  .tweetContent {
+    display: none;
+  }
+  .tweetContentMobile {
+    display: block;
+  }
+  .headerTextContainer {
+    flex-direction: column;
+  }
+  .hedaerInfoTextArea {
+    flex-direction: row;
+  }
+  .attachmentsContainer {
+    width: 100%;
+  }
+  .gallery4 img {
+    width: 160px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .timelineContainer {
+    width: 300px;
+  }
+  .headerContainer {
+    width: 220px;
+  }
+  .attachmentsContainer {
+    width: 220px;
+  }
+}
